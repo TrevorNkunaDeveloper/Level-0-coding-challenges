@@ -12,7 +12,8 @@ public class CommonCharacters {
         String firstString = input1.toLowerCase();
         String secondString = input2.toLowerCase();
         String primaryString, secondaryString;
-
+        String sep =", ";
+        System.out.print("Common letters: ");
         if(firstString.length() > secondString.length()){
             primaryString = firstString;
             secondaryString = secondString;
@@ -22,9 +23,13 @@ public class CommonCharacters {
             secondaryString = firstString;
         }
         for(int x = 0; x < primaryString.length();x++){
+            if(x == primaryString.length()-1)
+            {
+                sep ="";
+            }
             for (int y = 0 ; y < secondaryString.length(); y++){
                 if(primaryString.charAt(x) == secondaryString.charAt(y)){
-                    System.out.print(primaryString.charAt(x));
+                    System.out.print(primaryString.charAt(x)+sep);
                 }
             }
         }
