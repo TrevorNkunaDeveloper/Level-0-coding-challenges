@@ -3,10 +3,10 @@ import java.util.Locale;
 import java.util.Scanner;
 import  java.lang.StringBuilder;
 
-public class CommonCharacters {
+public class CommonChars {
     public static void main(String[] args){
 
-        check_for_common_chars("look","book");
+        check_for_common_chars("loook","book");
 
     }
     static void check_for_common_chars(String input1,String input2){
@@ -15,7 +15,7 @@ public class CommonCharacters {
         System.out.print("Common letters: ");
 
         // check which string is longer and assign it as primary string
-        if(firstString.length() > secondString.length() || firstString.length() == secondString.length()){
+        if(firstString.length() < secondString.length() || firstString.length() == secondString.length()){
             primaryString = firstString;
             secondaryString = secondString;
         }
