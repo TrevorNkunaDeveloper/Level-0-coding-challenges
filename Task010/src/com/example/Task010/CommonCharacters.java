@@ -3,10 +3,10 @@ import java.util.Locale;
 import java.util.Scanner;
 import  java.lang.StringBuilder;
 
-public class CommonChars {
+public class CommonCharacters {
     public static void main(String[] args){
 
-        check_for_common_chars("loook","book");
+        check_for_common_chars("a","aaaaaaaa");
 
     }
     static void check_for_common_chars(String input1,String input2){
