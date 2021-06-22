@@ -11,7 +11,6 @@ public class Bodmass {
         z = 1 + (1 * 2);
         a = 1 + 1 * 2 / 2;
 
-        //Cast numerator to double for division
         b = (double)(1 + 1 * 2) / 2;
 
         System.out.println(x);
