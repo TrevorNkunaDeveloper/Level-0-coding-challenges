@@ -5,45 +5,51 @@ import  java.lang.StringBuilder;
 
 public class CommonCharacters {
     public static void main(String[] args){
-
-        check_for_common_chars("a","aaaaaaaa");
-
+        check_for_common_chars("lookook","book");
     }
+
     static void check_for_common_chars(String input1,String input2){
-        String firstString = input1.toLowerCase(), secondString = input2.toLowerCase();
-        String primaryString, secondaryString, outString="", tempString ="", sep =", ";
+        String longerString = determine_longest_string(input1,input2);
+        String shorterString = determine_shorter_string(input1,input2);
+        String sep =", ";
+
         System.out.print("Common letters: ");
-
-        // check which string is longer and assign it as primary string
-        if(firstString.length() < secondString.length() || firstString.length() == secondString.length()){
-            primaryString = firstString;
-            secondaryString = secondString;
-        }
-        else{
-            primaryString = secondString;
-            secondaryString = firstString;
-        }
-
-        //For loop to find the common characters in the given string
-        for(int x = 0; x < primaryString.length(); x++){
-            if(x == primaryString.length()-1)
+        for(int x = 0; x < longerString.length(); x++){
+            if(x == longerString.length()-1)
             {
                 sep ="";
             }
-            String strr = Character.toString(primaryString.charAt(x));
+            String line = Character.toString(longerString.charAt(x));
 
-            for (int y = 0 ; y < secondaryString.length(); y++){
+            for (int y = 0 ; y < shorterString.length(); y++){
 
-                String strr1 = Character.toString(secondaryString.charAt(y));
+                String line2 = Character.toString(shorterString.charAt(y));
                 //To eliminate duplicates, exit loop if you find the first occurance
-                if(strr.equals(strr1)){
-                    System.out.print(primaryString.charAt(x)+sep);
-                    y += secondaryString.length()-1;
+                if(line.equals(line2)){
+                    System.out.print(line+sep);
+                    y += shorterString.length()-1;
                 }
             }
-
         }
+    }
 
+    static String determine_longest_string(String input1,String input2){
+        String firstString = input1.toLowerCase(), secondString = input2.toLowerCase();
+        String longerString = secondString;
+
+        if(firstString.length() < secondString.length() || firstString.length() == secondString.length()){
+            longerString = firstString;
+        }
+        return longerString;
+    }
+
+    static String determine_shorter_string(String input1,String input2){
+        String firstString = input1.toLowerCase(), secondString = input2.toLowerCase();
+        String shorterString = secondString;
+
+        if(firstString.length() > secondString.length()){
+            shorterString = firstString;
+        }
+        return shorterString;
     }
 }
-
