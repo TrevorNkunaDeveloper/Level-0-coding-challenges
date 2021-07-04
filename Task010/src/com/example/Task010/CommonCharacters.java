@@ -5,12 +5,12 @@ import  java.lang.StringBuilder;
 
 public class CommonCharacters {
     public static void main(String[] args){
-        check_for_common_chars("lookook","book");
+        checkForCommonChars("lookook","book");
     }
 
-    static void check_for_common_chars(String input1,String input2){
-        String longerString = determine_longest_string(input1,input2);
-        String shorterString = determine_shorter_string(input1,input2);
+    static void checkForCommonChars(String input1,String input2){
+        String longerString = determineLongestString(input1,input2);
+        String shorterString = determineShorterString(input1,input2);
         String sep =", ";
 
         System.out.print("Common letters: ");
@@ -33,7 +33,7 @@ public class CommonCharacters {
         }
     }
 
-    static String determine_longest_string(String input1,String input2){
+    static String determineLongestString(String input1,String input2){
         String firstString = input1.toLowerCase(), secondString = input2.toLowerCase();
         String longerString = secondString;
 
@@ -43,7 +43,7 @@ public class CommonCharacters {
         return longerString;
     }
 
-    static String determine_shorter_string(String input1,String input2){
+    static String determineShorterString(String input1,String input2){
         String firstString = input1.toLowerCase(), secondString = input2.toLowerCase();
         String shorterString = secondString;
 

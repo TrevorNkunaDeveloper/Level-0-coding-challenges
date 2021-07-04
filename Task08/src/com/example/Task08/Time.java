@@ -3,11 +3,11 @@ package com.example.Task08;
 public class Time {
     public static void main(String[] args){
         int num = 62;
-        convert_time(num);
+        convertTime(num);
 
     }
 
-    static void convert_time(int number){
+    static void convertTime(int number){
 
         String hoursText, minutesText;
         int hours = number / 60;

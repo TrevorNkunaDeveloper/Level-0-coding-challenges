@@ -4,7 +4,7 @@ public class Vowels {
     public static void main(String[] args) {
     }
 
-        public static void print_out_vowels(String text){
+        public static void printOutVowels(String text){
         char[] stringText = text.toLowerCase().toCharArray();
 
         for(int x = 0; x < stringText.length; x++){
