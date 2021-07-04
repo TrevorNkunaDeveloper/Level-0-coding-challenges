@@ -7,9 +7,9 @@ public class AreaOfTriangle {
         int Length2 = 3;
         int Length3 = 4;
 
-        System.out.println(compute_area(Length1,Length2,Length3));
+        System.out.println(computeArea(Length1,Length2,Length3));
     }
-    static double compute_area(int length1,int length2,int length3){
+    static double computeArea(int length1,int length2,int length3){
 
         double semiPerimeter = (double) 1/2*(length1 + length2 + length3);
 

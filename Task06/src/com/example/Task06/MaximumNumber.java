@@ -6,9 +6,9 @@ public class MaximumNumber {
         int num2 = 4;
         int num3 = 100;
 
-        System.out.println(compute_maximum(num1,num2,num3));
+        System.out.println(computeMaximum(num1,num2,num3));
     }
-    static int compute_maximum(int value1,int value2, int value3){
+    static int computeMaximum(int value1,int value2, int value3){
         int max=0;
 
         if(value1 > value2 && value1 > value3){

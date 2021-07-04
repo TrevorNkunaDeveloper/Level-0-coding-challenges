@@ -3,9 +3,9 @@ package com.example.Task04;
 public class EvenOdd {
     public static void main(String[] args){
         int number = 51;
-        even_or_odd(number);
+        evenOrOdd(number);
     }
-    static void even_or_odd(int value){
+    static void evenOrOdd(int value){
         if(value % 2 == 0){
             System.out.println("even");
         }
